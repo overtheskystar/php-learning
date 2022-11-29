@@ -1,0 +1,190 @@
+body,div,p,ul,li,dl,dt,dd,h1,a{margin:0; padding:0;}
+img{border:none;}
+h1{font-size:100%;}
+
+
+html{background:url(../images/bg.gif) repeat-x;}
+body
+{
+    background:url(../images/clouds.gif) repeat-x; 
+    padding-top:45px;
+   font-family:Verdana, Geneva, sans-serif;
+}
+
+
+#header,#banner,#content,#footer
+{
+    width:1000px;  
+    margin:0 auto;
+} 
+#header
+{
+    overflow:hidden;
+}
+#logo
+{
+    display:block; 
+    width:220px; 
+    height:54px; 
+    float:left; 
+    background:#991616;
+}
+#logo img{display:block;}
+
+#nav{ float:left; background:#393838; list-style:none;width:780px; height:54px;}
+#nav li{float:left;}
+#nav li a{float:left;display:block;  line-height:54px;width:86px; height:54px;  text-align:center; font-size:12px; color:#ccc; text-decoration:none; }
+#nav li a:hover{color:#fff;}
+#nav li .navActive{ background:url(../images/navHoverBg.png) no-repeat; color:#fff;}
+
+#banner{display:block; width:1000px; height:292px; margin:10px auto;}
+#banner img{display:block; width:1000px; height:292px;}
+
+#content
+{
+     overflow:hidden; 
+     background:#DEF6FF; 
+     font-size:12px; 
+     line-height:24px;
+}
+#leftArticle,#rightInfo,#leftArticle2
+{
+     margin:10px;
+     float:left;
+     display:inline;
+}
+#leftArticle,#leftArticle2{width:660px;height:1000px;}
+#rightInfo{width:300px;}
+
+#leftArticle2
+{background-color:white;
+}
+#leftArticle2 h1
+{
+     background:url(../images/title2.jpg) no-repeat;
+     height:32px;
+     line-height:32px; 
+     color:#FFF; 
+     font-size:14px; 
+     font-weight:bold; 
+     text-indent:35px;
+}
+#leftArticle2 dl dd
+{
+line-height:48px;
+font-size:28px;
+}
+
+#leftArticle #tab
+{      
+         /*定义选项卡为相对定位，使其子级元素有定位参考对象*/
+         position:relative;
+         /*定义选项卡的整体宽度width:660px;*/
+         width:660px;
+}
+#leftArticle #tab div 
+{
+        /* 以绝对定位将选项卡的内容定位在选项卡标题下面 也可定义选项卡内容宽度width:658px; */
+         position:absolute;
+         top:32px;
+         left:0;
+        /* 定义选项卡内容宽度width:658px; */
+         width:658px;
+         border:solid #900; /* 设置选项卡内容区域边框的样式和边框颜色 */
+         border-width:1px 1px 1px; /* 设置选项卡内容区域边框的线条宽度 */
+     
+          /*隐藏所有选项卡的内容区域*/
+         display:none;
+}
+#leftArticle #tab h3 
+{        /* 将所有的标签标题浮动，并设置其宽度和高度等属性，再添加背景图修饰标题 */
+         float:left;
+         width:114px;
+         height:32px;
+         margin:0 -1px 0 0; /* 利用负边距让标题更靠近一点 */
+         line-height:32px;
+         font-size:14px;
+         font-weight:bold; 
+         text-align:center;
+         color:#ffffff;
+         background:#EEEEEE url('../images/tab_bg.gif') no-repeat;
+         cursor:pointer;
+         border-width:0px; /* 设置选项卡内容区域边框的线条宽度 */
+}
+
+#leftArticle #tab  .block
+{      /*当选项卡某个内容区域被激活时，显示内容，并设置该容器底部的内补丁为10px*/
+         display:block;
+         padding-bottom:10px;
+}
+#leftArticle #tab  .up
+{       /*当某个标题被激活时改变背景图片，突出显示*/
+         background:#FFFFFF url('../images/tab_up_bg.gif') no-repeat;
+}
+
+#leftArticle #tab ul
+{
+         margin:15px 0 0;
+         padding:0;
+         list-style:none;
+}
+#leftArticle #tab li
+{
+         display:inline;/*解决IE6中双倍间距的bug*/
+         float:left;
+         width:47.9%;/*解决IE浏览器中相对值宽度计算的bug*/
+         height:22px;
+         margin:0 1%;
+         line-height:22px;
+         text-indent:10px;
+         border-bottom:1px dashed #ff8000;
+}
+#leftArticle #tab li a
+{
+         font-family:"微软雅黑","黑体";
+         font-size:12px;
+         text-decoration:none;
+         text-indent:10px;
+         color:#000000;
+}
+#leftArticle #tab li a:hover
+{
+         text-decoration:underline;
+         color:#FF0000;
+}
+
+#rightInfo dl{margin-bottom:10px;}
+#rightInfo dl dt
+{
+     background:url(../images/title.jpg) no-repeat;
+     height:32px;
+     line-height:32px; 
+     color:#FFF; 
+     font-size:14px; 
+     font-weight:bold; 
+     text-indent:20px;
+}
+#rightInfo dl dd
+{
+  height:24px; 
+  line-height:24px;
+  background:url(../images/dot.gif) no-repeat 7px 10px; 
+  text-indent:16px;
+}
+#rightInfo dl dd a{color:#333; text-decoration:none;}
+#rightInfo dl dd a:hover{color:#900; text-decoration:underline;}
+
+
+#footer
+{
+  background:#393838; 
+  height:52px;
+  line-height:18px; 
+  margin-top:10px; 
+  padding-top:18px;
+  text-align:center;
+  color:#ccc;
+  font-size:12px; 
+}
+#footer a{color:#ccc; text-decoration:none;}
+#footer a:hover{text-decoration:underline;}
