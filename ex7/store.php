@@ -11,6 +11,7 @@ mkdir("storeData/$subPath", 0777, true);
 //创建文件fopen(string $filename, string $mode)
 $path="storeData/".$subPath."/";
 $myfile = fopen($path."fileName","w") or die('打开文件失败');
+//注意：这里写需要写入的信息↓
 $txt = "contents";
 
 //写入文件int fwrite(resource $handle,string $string[,int $length])
