@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>大学英语四六级网上报名管理系统</title>
+    <style>
+        body {
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center
+        }
+        table {
+            border-collapse: collapse
+        }
+        th {
+            background-color: #DADBDC
+        }
+        th, td {
+            border: 1px solid #000000;
+            height: 30px;
+            text-align: center
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            color: #007DDB;
+        }
+    </style>
+</head>
+<body>
+<h2>大学英语四六级网上报名管理系统</h2>
+<table width="100%">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>班级</th>
+        <th>报考类型</th>
+    </tr>
+    <?php
+     //遍历输出数据数组
+     //int数据类型便于排序，输出学号前补0使显示数据完整
+     foreach($dataArr as $row)
+     {
+    ?>
+    <tr>
+        <td><?='0'.$row["stuID"]?></td>
+        <td><?=$row["stuName"]?></td>
+        <td><?=$row["stuClass"]?></td>
+        <td><?=$row["examType"]?></td>
+    </tr>
+    <!--与foreach循环的左大括号配对-->
+    <?php 
+       }
+    ?>
+</table>
+</body>
+</html>
